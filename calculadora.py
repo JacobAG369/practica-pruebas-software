@@ -1,6 +1,12 @@
 def sumar(a, b):
     return a + b
 
+def restar(a, b):
+    return a - b
+
+def multiplicar(a, b):
+    return a * b
+
 def dividir(a, b):
     if not isinstance(a, (int, float)) or isinstance(a, bool):
         raise TypeError("Los valores deben ser numéricos")
