@@ -1,6 +1,4 @@
-yaml
 
-name: Pruebas automatizadas
 
 on:
 push:
