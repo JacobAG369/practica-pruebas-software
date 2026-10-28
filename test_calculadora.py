@@ -18,3 +18,8 @@ def test_dividir_decimal():
 def test_dividir_entre_cero():
     with pytest.raises(ValueError):
         dividir(10, 0)
+
+@pytest.mark.parametrize(("a", "b"), [("10", 2), (10, "2"), (True, 2), (10, False)])
+def test_dividir_valores_no_numericos(a, b):
+    with pytest.raises(TypeError, match="Los valores deben ser numéricos"):
+        dividir(a, b)
